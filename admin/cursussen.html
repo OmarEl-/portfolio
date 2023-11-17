@@ -1,0 +1,70 @@
+<div id="content">
+   <div class="cursussen-page">
+    
+    <a href="" data-progress-type="show" class="cursus-page-card"><i class="fa fa-book fa-3x" aria-hidden="true"></i>&nbsp;Show Cursus</a>
+
+
+<a href="" data-progress-type="edit" class="cursus-page-card"><i class="fa fa-edit fa-3x" aria-hidden="true"></i>&nbsp;Edit Cursus</a>
+
+<a href="" data-progress-type="add" class="cursus-page-card"><i class="fa fa-plus-square fa-3x" aria-hidden="true"></i>&nbsp;Add New Cursus</a>
+<a href="" data-progress-type="delete" class="cursus-page-card"><i class="fa fa-eraser fa-3x" aria-hidden="true"></i>&nbsp;Delete Cursus</a>
+    
+   
+</div>
+
+</div>
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        
+          
+        $(".cursussen-page a").on('click', function(e) {
+          e.preventDefault();
+               var textTarget = $(this).attr('data-progress-type');
+              
+               console.log(textTarget);
+
+                loadPage(textTarget);
+            });
+        
+        
+            function loadPage(pageUrl) {
+            $.ajax({
+                url: pageUrl+".html",
+                type: 'GET',
+                success: function(data) {
+                    $('#content').html(data);
+                },
+                error: function() {
+                    $('#content').html('Failed to load the page.');
+                }
+            });
+        }
+    
+        
+  
+        
+        
+        
+        
+        
+        // jQuery load() to load pages into a div
+//        $(document).ready(function() {
+//            $('#loadshow-cursus').on('click', function() {
+//                $('#content').load('show.html');
+//            });
+//
+//            $('#loadedit-cursus').on('click', function() {
+//                $('#content').load('edit.html');
+//            });
+//
+//            $('#loadadd-cursus').on('click', function() {
+//                $('#content').load('add.html');
+//            });
+//
+//            $('#loaddelete-cursus').on('click', function() {
+//                $('#content').load('delete.html');
+//            });
+//        });
+      </script>
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->

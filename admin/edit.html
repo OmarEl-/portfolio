@@ -1,0 +1,211 @@
+
+<h1>edit page</h1>
+<style>
+    
+    .course-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-table th, .course-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.course-table th {
+  background-color: #f2f2f2;
+}
+
+.check-button,
+.edit-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.check-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-button {
+  background-color: #2ecc71;
+  color: white;
+}
+/* Adjust image size */
+.course-table img {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .course-table img {
+    max-width: 60px;
+  }
+}
+    /*================*/
+    
+
+    
+</style>
+
+
+<table class="course-table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Course Name</th>
+      <th>Title</th>
+      <th>Duration</th>
+      <th>Author</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="../cursussen/images/colorful3.png" alt="Course 1"></td>
+      <td>Course Name 1</td>
+      <td>Title of Course 1</td>
+      <td>6 weeks</td>
+      <td>John Doe</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful2.png" alt="Course 2"></td>
+      <td>Course Name 2</td>
+      <td>Title of Course 2</td>
+      <td>8 weeks</td>
+      <td>Jane Smith</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful3.png" alt="Course 1"></td>
+      <td>Course Name 1</td>
+      <td>Title of Course 1</td>
+      <td>6 weeks</td>
+      <td>John Doe</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful4.png" alt="Course 2"></td>
+      <td>Course Name 2</td>
+      <td>Title of Course 2</td>
+      <td>8 weeks</td>
+      <td>Jane Smith</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful5.png" alt="Course 1"></td>
+      <td>Course Name 1</td>
+      <td>Title of Course 1</td>
+      <td>6 weeks</td>
+      <td>John Doe</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful1.png" alt="Course 2"></td>
+      <td>Course Name 2</td>
+      <td>Title of Course 2</td>
+      <td>8 weeks</td>
+      <td>Jane Smith</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful3.png" alt="Course 1"></td>
+      <td>Course Name 1</td>
+      <td>Title of Course 1</td>
+      <td>6 weeks</td>
+      <td>John Doe</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful2.png" alt="Course 2"></td>
+      <td>Course Name 2</td>
+      <td>Title of Course 2</td>
+      <td>8 weeks</td>
+      <td>Jane Smith</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful5.png" alt="Course 1"></td>
+      <td>Course Name 1</td>
+      <td>Title of Course 1</td>
+      <td>6 weeks</td>
+      <td>John Doe</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="../cursussen/images/colorful4.png" alt="Course 2"></td>
+      <td>Course Name 2</td>
+      <td>Title of Course 2</td>
+      <td>8 weeks</td>
+      <td>Jane Smith</td>
+      <td>
+       
+        <button class="edit-button" data-edit-cursus="edit_cursus">Edit</button>
+      </td>
+    </tr>
+    <!-- Add more rows for additional courses -->
+  </tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(".edit-button").on('click', function(e) {
+          e.preventDefault();
+               var textTarget = $(this).attr('data-edit-cursus');
+              
+               console.log(textTarget);
+
+                loadPage(textTarget);
+            });
+    
+     function loadPage(pageUrl) {
+                
+            $.ajax({
+                url: pageUrl+".html",
+                type: 'GET',
+                success: function(data) {
+                        $('#content').html(data);
+                },
+                error: function() {
+                    $('#content').html('Failed to load the page.');
+                }
+            });
+        }
+    
+    
+    
+</script>

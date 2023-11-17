@@ -1,0 +1,426 @@
+/*
+#3bba9c
+#2e3047
+#43455c
+#3c3f58
+#707793
+===========
+#17252a
+#2b7a78
+#3aafa9
+#def2f1
+#feffff
+========
+#ECE9E9
+#D3DCDE
+#28B67E
+#1D4C4F
+#0D1321
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:ital,wght@0,700;0,900;1,500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Fira Sans" ,sans-sarif
+
+}
+
+            body{
+                 min-height:100vh;
+            }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        li{
+            list-style: none;
+            
+            
+        }
+
+
+     /*======== START Form Components style ========*/
+    /*======== START Form Components style ========*/
+    /*======== START Form Components style ========*/
+    /*======== START Form Components style ========*/
+
+
+
+/* Apply basic styling to all input and textarea elements */
+input[type="text"],
+textarea {
+  width: 100%; /* Take up the full width of the container */
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the placeholder text for input and textarea */
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+/* On focus, change the border color */
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+
+/* Basic styling for the file input and submit button */
+input[type="file"],
+input[type="submit"] {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+/* On hover, change the background color of the submit button */
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Style the file input */
+input[type="file"] {
+  /* For demonstration purposes */
+  /* File input is hard to style, consider using a label and styling it for better design */
+  /* This CSS does not alter the file selection button itself, but the text and border around it */
+  color: transparent;
+}
+input[type="file"]::-webkit-file-upload-button {
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit_cursus .edit-topic .edit-post label{
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+color:#666;
+font-size:0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  input[type="text"],
+  textarea , input[type="file"],
+  input[type="submit"]{
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+}
+
+
+ /*======== END Form Components style ========*/
+ /*======== END Form Components style ========*/
+ /*======== END Form Components style ========*/
+  /*======== END Form Components style ========*/
+     .app{
+   /* width:100%; */
+    display:flex;
+    min-height:100vh;
+}
+     
+      .brand-name h3{
+          position:relative;
+          left:100px;
+           color:#fff;
+           padding:10px;
+            text-align:center;
+/*           background-color: #3bba9c;*/
+            color: #fff;
+           font-size:2rem;
+            text-transform:uppercase;
+            
+                }
+
+        .side-menu{
+
+             flex:1 1 0;
+            max-width:300px;
+            padding:2rem 1rem;
+            background-color:#2e3047;
+           
+        }
+
+        .side-menu .menu{
+            margin:0 -1rem;
+        }
+        .side-menu .menu .menu-item{
+            display:block;
+            padding:1em;
+            color:#fff;
+            text-decoration: none;
+            transition:0.2s linear;
+        }
+        .side-menu .menu .menu-item:hover,.side-menu .menu .menu-item.is-active{
+            color:#3bba9c;
+            border-right:5px solid #3bba9c;
+        }
+/*============ navbar start ========*/
+            .nav{
+            
+            width:100vw;
+            height:60px;
+            background:#ddd;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2e3047;
+           
+            }
+
+ .nav .search, .search2{
+            flex:3;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+ .content .search2{
+        display: none;
+        
+    }
+.nav .search input[type="text"], .search2 input[type="text"]{
+            border:none;
+            border:1px solid #3bba9c;
+            padding:10px;
+            width:40%;
+            border-radius:7px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            
+        }
+.nav .search button, .search2 button{
+            padding:10px;
+            width:100px;
+            border:none;
+            border:1px solid #3bba9c;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+            margin-left: -5px;
+            background-color: #3bba9c;
+            color:#222;
+        }
+  .nav .btn{
+            padding:6px;
+            background-color: #3bba9c;
+            border: 1px solid #3bba9c;
+            border-radius: 6px;
+            color: #43455c;
+            font-weight: bold;
+            }             
+           
+.nav .profile {
+            display: flex;
+            color:#eee;
+            margin-left:10px;
+            align-items: center;
+        justify-content:space-between;
+            line-height: 1;
+            margin-left: 40px;
+            padding:40px;
+        }
+.nav .profile img{
+    
+           width:30px;
+           height:30px;
+           border:2px solid #eee;
+           border-radius: 50%;
+           margin-left: 40px;
+        }
+/*============ navbar start ========*/
+
+        .content{
+            flex:1;
+            padding:2rem;
+        }
+
+        .content h1{
+            color:#3c3f58;
+            font-size:2.5rem;
+            margin-bottom:1rem;
+        }
+        .content p{
+            color:#707793;
+        }
+
+
+        .menu-toggle{
+            display:none;
+            position:absolute;
+            top:10px;
+            right:2.9rem;
+            width:40px;
+            height:40px;
+            border-radius:99px;
+            padding-left: 25px;
+            cursor:pointer;
+        }
+
+.hamburger{
+    position:relative;
+    top:calc(50% - 2px);
+    left:50%;
+    transition:translate(-50%,-50%);
+    width:32px;
+}
+.hamburger > span, .hamburger > span::before,
+.hamburger > span::after{
+    display:block;
+    position:absolute;
+    width:100%;
+    height:4px;
+    border-radius:99px;
+    background-color:#fff;
+    transition-duration:.25s;
+}
+.hamburger > span::before{
+    content:'';
+    top:-8px;
+
+}
+.hamburger > span::after{
+    content:'';
+    top:8px;
+    
+}
+.menu-toggle.is-active .hamburger > span::before{
+top:0;
+transform:rotate(0deg);
+}
+.menu-toggle.is-active .hamburger > span::after{
+    top:0;
+    transform:rotate(90deg);
+    }
+.cursussen-page {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .cursussen-page .cursus-page-card{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    width:100%;
+    max-width:400px;
+    height:100%;
+    border:1px solid #3aafa9;
+    border-left: 10px solid #3aafa9;
+    margin:10px;
+    padding:30px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color:#D3DCDE;
+}
+  .cursussen-page .cursus-page-card i{
+      color:#3aafa9;
+      margin-right:40px;
+}
+
+
+/*===== HERE IS edit.html PAGE STYLE ===*/
+
+/*===== HERE IS edit.html PAGE STYLE ===*/
+/*    video*/
+@media(max-width:1024px){
+    .brand-name h3{
+        left:10px;
+    }
+    .side-menu{
+        max-width:200px;
+    }
+}
+@media (max-width:768px){
+   
+    .nav .search{
+        display: none;
+    }
+     .content .search2{
+        
+         display:flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .search2 input[type="text"]{
+         width:100%;
+    }
+    .nav .btn{
+        display:none;
+    }
+    .menu-toggle{
+        display:block;
+    }
+    .content{
+        padding-top:4rem;
+    }
+    .side-menu{
+        position:fixed;
+        top:0;
+        left:-300px;
+        height:100vh;
+        width:100%;
+        max-width:150px;
+        transition:0.2s linear;
+    }
+    .side-menu.is-active{
+        left:0;
+    }
+    
+    .cursussen-page .cursus-page-card{
+    
+    width:100%;
+   
+}
+}
+
+/*============= Cursussen.html ============*/
+
+.insert-topic input[type="text"],.insert-topic textarea{
+    resize:both;
+    width:100%;
+    height:100%;
+    padding:10px;
+    margin-top:30px
+}
+    .insert-topic button{
+        width:30%;
+        min-width:150px;
+        padding:10px 40px;
+    }
+
+.cursussen-page a{
+    color:#333;
+}
+.cursussen-page .cursus-page-card{
+    
+    
+}
+
+
+
+
+
+
+
+

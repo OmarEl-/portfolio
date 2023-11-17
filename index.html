@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles62.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="sidebare.css">
+
+
+</head>
+
+<body>
+
+<!--    <div class="overlay" id="overlay"></div>-->
+<div class="overlay" id="overlay"></div>
+    <!--===== navbar start ====-->
+    <nav class="navbar">
+        <div class="brand">
+            <a href="#">Brand</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Doneren</a></li>
+            <li><a href="#">vraag</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li class="nav-links-icon"><a href="#"><i class="fa fa-bell fa-lg" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-links-icon"><a href="#" class="main-item"><i class="fa fa-user fa-lg" aria-hidden="true">
+<!--
+                <ul class="drop-items-list">
+                <li>Links</li>
+                <li>Links</li>
+                <li>Links</li>
+                <li>Links</li>
+                <li>Links</li>
+                <li>Links</li>
+                </ul>
+-->
+            </i></a>
+            </li>
+
+        </ul>
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span>
+
+                </span>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="app">
+
+        <!--==== MAIN NAVIGATION LINKS =====-->
+
+        <div class="main-nav-links">
+            <ul class="nav-links-items">
+                <li><a href="#" class="main-item is-active" data-main-links="home"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<span>Home</span></a></li>
+                <li><a href="#" class="main-item"  data-main-links="cursus"id="cursussen"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;<span>Cursussen</span></a></li>
+                <li><a href="#" class="main-item" data-main-links="quiz"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp;<span>Quizes</span></a></li>
+                <li><a href="#" class="main-item" data-main-links="examen"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;<span>Examens</span></a></li>
+                <li><a href="#" class="main-item" data-main-links="student"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;<span>Student</span></a></li>
+                <li><a href="#" class="main-item" data-main-links="teacher"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;<span>Teachers</span></a></li>
+            </ul>
+        </div>
+        <!--==== MAIN NAVIGATION LINKS =====-->
+
+        <div class="content-box">
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><span><i class="fa fa-search fa-lg" aria-hidden="true"></i></span><p>Search</p></button>
+            </div>
+            <main class="content" id="content">
+
+            </main>
+        </div>
+    </div>
+    <!--==== END app =====--->
+
+
+    <!-- Add more course items as needed -->
+
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Doneren</a></li>
+            <li><a href="#">vraag</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /*=== LLOADING PAGE (dashboard.html) INSIDE PAGE (index.html) THAT MEANS PAGE (dashboard.html) IS THE MEAN PAGEN OF THE FRONT PAGE OF THE ADMIN PANEL ===*/
+
+        $("#content").load("home.html");
+         /*============ SHOW SEARCH BUTTON WHEN SCREEN SIZE IS LESS THEN 768 ==============*/
+//const searchIcon = document.querySelector('.content-box .search span');
+//         searchIcon.setAttribute("class","active");
+//        searchIcon.innerHTML = '<span><i class="fa fa-search fa-lg" aria-hidden="true"></i></span>';
+        /*==========================*/
+        const menu_toggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.main-nav-links');
+        const overlay = document.querySelector('.overlay');
+        menu_toggle.addEventListener('click', () => {
+            menu_toggle.classList.toggle('is-active');
+            sidebar.classList.toggle('is-active');
+            overlay.classList.toggle('is-active2');
+
+        });
+
+        /*============================================*/
+
+        $('#overlay').click(function(e) {
+            e.preventDefault();
+            //   if(!$(e.target).hasClass('container') )
+            //   {
+            //console.log('textTarget');
+            menu_toggle.classList.remove('is-active');
+            sidebar.classList.remove('is-active');
+            overlay.classList.toggle('is-active2');
+            //}
+        });
+
+        /*================*/
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        /*================*/
+ $(".main-item").on('click', function(e) {
+            e.preventDefault();         
+            var textTarget = $(this).attr('data-main-links');
+
+            //console.log(textTarget);
+
+            loadPage(textTarget);
+        });
+        //            $('#cursussen').on('click', function() {
+        //                $.get('cursussen.html', function(data) {
+        //                    $('.content #container').html(data);
+        //                });
+        //            });
+
+        function loadPage(pageUrl) {
+
+            $.ajax({
+                url: "cursussen/"+pageUrl + ".html",
+                type: 'GET',
+                success: function(data) {
+                    if(pageUrl !== "home" && pageUrl !== "cursus"){
+                          $('#content').html(data);
+                        console.log(pageUrl);
+                    }else{
+                        $("#content").load("home.html");
+                    }
+                  
+                },
+                error: function() {
+                    $('#content').html('Failed to load the page.');
+                }
+            });
+        }
+        
+        
+        /*============== NAVBAR TO SIDEBAR ================*/
+        
+        let txt = $('ul.nav-links li ').text();
+        
+        if(window.innerWidth <768){
+            
+           $('ul.nav-links li ').each(function(){
+               $('.nav-links-items').append(' <li><a href="">'+txt+'</a></li>');
+          });
+                                      }
+        
+    </script>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+</body></html>
+
+     
+        
