@@ -60,15 +60,16 @@ li{
   
   .overlay{
     display: none;
-    width:100%;
-    height:100%;
-    margin:0;
-    position:fixed;
+    
     
    
 } 
   .overlay.is-active2{
     display:block;
+    width:100%;
+    height:100%;
+    margin:0;
+    position:fixed;
     background-color:rgba(0,0,0,0.7);
     transition:0.2s linear;
 }  
