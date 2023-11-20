@@ -70,7 +70,7 @@ li{
     height:100%;
     margin:0;
     position:fixed;
-    background:#000;
+    background:rbga(0,0,0,0.5;
     transition:0.2s linear;
 }  
 }
