@@ -68,7 +68,8 @@ li{
     height:100%;
     margin:0;
     position:fixed;
-    background: rgba(0, 0, 0, 0.5);
-    transition:0.2s linear;
+    background: #000;
+      opacity: 0.5;
+/*     transition:0.2s linear; */
 }  
 }
