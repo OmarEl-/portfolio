@@ -94,6 +94,9 @@ body {
     border: 1px solid #ccc;
     padding: 15px;
 }
+.course-item:hover{
+    transform:scale(1.5);
+}
 
 .course-item img {
     width: 100%;
