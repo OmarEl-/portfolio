@@ -94,13 +94,14 @@ body {
     border: 1px solid #ccc;
     padding: 15px;
 }
-.course-item:hover{
-    transform: scale(2,3);
-}
 
 .course-item img {
     width: 100%;
     height: auto;
+}
+
+.course-item img:hover{
+    transform: scale(2,3);
 }
 
 .button-container {
