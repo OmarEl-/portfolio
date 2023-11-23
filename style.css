@@ -101,7 +101,7 @@ body {
 }
 
 .course-item img:hover{
-    transform: scale(2,3);
+    transform: scale(1,1);
 }
 
 .button-container {
