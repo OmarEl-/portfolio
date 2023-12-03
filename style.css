@@ -46,7 +46,7 @@ body {
 }
 
 .search button {
-    padding: 9px;
+    padding: 10px;
     border: none;
     border: 1px solid #3bba9c;
     border-top-right-radius: 7px;
@@ -99,11 +99,10 @@ body {
     width: 100%;
     height: auto;
 }
-
-.course-item img:hover{
-    transform: scale(1,1);
+.course-item:hover {
+   transform:scale(1.1, 1.1);
+    transition:0.3s;
 }
-
 .button-container {
     display: flex;
     justify-content: space-between;
@@ -178,7 +177,7 @@ footer .footer-links li a{
     
 }
 
-@media (min-width:1024px) {
+@media (min-width:1024pxpx) {
 /*
 .course-grid {
  display: grid;
