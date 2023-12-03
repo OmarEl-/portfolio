@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="styles62.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="sidebare.css">
+    <link rel="stylesheet" href="modalLoaded.css">
 
 
 </head>
 
 <body>
+
 
 <!--    <div class="overlay" id="overlay"></div>-->
 <div class="overlay" id="overlay"></div>
@@ -30,7 +32,7 @@
 
         <ul class="nav-links">
             <li><a href="#">Doneren</a></li>
-            <li><a href="admin/index2.html">admin</a></li>
+            <li><a href="#">vraag</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li class="nav-links-icon"><a href="#"><i class="fa fa-bell fa-lg" aria-hidden="true"></i></a>
@@ -100,7 +102,13 @@
             <li><a href="#">Services</a></li>
         </ul>
     </footer>
-   
+   <div id="modal">
+  <div id="modal-content">
+    <p>This is your modal content.</p>
+    <img src="cursussen/images/thumbnail3.png" alt="">
+    <button id="close-btn">Close</button>
+  </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         /*=== LLOADING PAGE (dashboard.html) INSIDE PAGE (index.html) THAT MEANS PAGE (dashboard.html) IS THE MEAN PAGEN OF THE FRONT PAGE OF THE ADMIN PANEL ===*/
@@ -123,14 +131,14 @@
 
         /*============================================*/
 
-        $('.overlay').click(function(e) {
+        $('#overlay').click(function(e) {
             e.preventDefault();
             //   if(!$(e.target).hasClass('container') )
             //   {
             //console.log('textTarget');
             menu_toggle.classList.remove('is-active');
             sidebar.classList.remove('is-active');
-            overlay.classList.remove('is-active2');
+            overlay.classList.toggle('is-active2');
             //}
         });
 
@@ -186,8 +194,27 @@
            $('ul.nav-links li ').each(function(){
                $('.nav-links-items').append(' <li><a href="">'+txt+'</a></li>');
           });
-                                      }
+       }
         
+        
+        
+    /*============= modal loader after 10s ===========*/   
+        
+        document.addEventListener("DOMContentLoaded", function () {
+    var modal = document.getElementById("modal");
+    var closeButton = document.getElementById("close-btn");
+
+    // Show the modal after 10 seconds
+    setTimeout(function () {
+      modal.style.display = "flex";
+    }, 2000);
+
+    // Close the modal when the close button is clicked
+    closeButton.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  });
+   /*============= modal loader after 10s ===========*/   
     </script>
     <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
 </body></html>
