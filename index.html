@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles62.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="sidebare.css">
     <link rel="stylesheet" href="modalLoaded.css">
@@ -23,7 +22,7 @@
 
 
 <!--    <div class="overlay" id="overlay"></div>-->
-<div class="overlay" id="overlay"></div>
+<div class="overlay55" id="overlay66"></div>
     <!--===== navbar start ====-->
     <nav class="navbar">
         <div class="brand">
@@ -121,7 +120,7 @@
         /*==========================*/
         const menu_toggle = document.querySelector('.menu-toggle');
         const sidebar = document.querySelector('.main-nav-links');
-        const overlay = document.querySelector('.overlay');
+        const overlay55 = document.querySelector('.overlay55');
         menu_toggle.addEventListener('click', () => {
             menu_toggle.classList.toggle('is-active');
             sidebar.classList.toggle('is-active');
@@ -131,14 +130,14 @@
 
         /*============================================*/
 
-        $('#overlay').click(function(e) {
+        $('#overlay66').click(function(e) {
             e.preventDefault();
             //   if(!$(e.target).hasClass('container') )
             //   {
             //console.log('textTarget');
             menu_toggle.classList.remove('is-active');
             sidebar.classList.remove('is-active');
-            overlay.classList.toggle('is-active2');
+            overlay55.classList.toggle('is-active2');
             //}
         });
 
