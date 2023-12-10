@@ -59,10 +59,10 @@ li{
         left:0;
     }
   
-  .overlay{
+  .overlay55{
     display: none;
 } 
-  .overlay.is-active2{
+  .overlay55.is-active2{
     display:block;
       position: fixed;
       top: 0;
