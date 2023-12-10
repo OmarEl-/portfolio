@@ -122,6 +122,10 @@ transform:rotate(45deg);
     top:0;
     transform:rotate(-45deg);
     }
+.menu-toggle.is-active .hamburger > span{
+top:0;
+transform:rotate(45deg);
+}
 /*
   .nav-links.active {
     display: flex; 
