@@ -99,7 +99,7 @@ body {
     width: 100%;
     height: auto;
 }
-.course-item:hover {
+.course-item img:hover {
    transform:scale(1.1, 1.1);
     transition:0.3s;
 }
